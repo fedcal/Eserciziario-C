@@ -1,8 +1,8 @@
-#4EM
+# 4EM
 
 Esercizio di complessità media sui file e sulle strutture
 
-##Traccia
+## Traccia
 
 Si realizzi in C un programma per consultare un archivio di viaggi ferroviari.
 

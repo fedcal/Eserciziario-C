@@ -1,8 +1,8 @@
-#3EM
+# 3EM
 
 Questo esercizio è di livello medio. Vengono utilizzate le strutture e i file.
 
-##Traccia
+## Traccia
 
 Si realizzi in C un programma per consultare un conto telefonico.
 La base dati consiste in un file di testo chiamato 'conto.dat', in cui ogni riga descrive una telefonata nel formato:
