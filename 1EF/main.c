@@ -21,9 +21,8 @@ int main(){
 void CaricareVettore(int x, int Vet[x]){
 
     int i=0;
-    while (i<x)
-    {
-        printf("\n Inserire elemento in posizione %d",i);
+    while (i<x){
+        printf("\n Inserire elemento in posizione %d: ",i);
         scanf("%d",&Vet[i]);
         i++;
     }
@@ -31,8 +30,7 @@ void CaricareVettore(int x, int Vet[x]){
 
 int TrovareMassimo(int x, int Vet[x]){
     int max=0, i=0;
-    while(i<x)
-    {
+    while(i<x){
         if (Vet[i]>max)
             max=Vet[i];
         i++;
@@ -43,10 +41,10 @@ int TrovareMassimo(int x, int Vet[x]){
 int TrovareMinimo(int x, int Vet[x]){
     int min,i=0;
     min=Vet[0];
-    while(i<x)
-    {
+    while(i<x){
         if(min>Vet[i])
             min=Vet[i];
+        i++;
     }
     return(min);
 }
