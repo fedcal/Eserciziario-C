@@ -10,7 +10,7 @@ int main()
 {
     int n1=0,m1=1,n2=1,m2=0,moltiplicatore=0,scelta=4;
     printf("\n Inserire le dimensioni delle due matrici (le dimensioni delle righe e delle colonne delle due matrici devono essere uguali) \n");
-    while((n1!=n2)&&(m1!=m2)){
+    while((n1!=n2)||(m1!=m2)){
         printf("\n Inserire numero righe prima matrice \n");
         scanf("%d",&n1);
         printf("\n Inserire numero colonne prima matrice \n");
