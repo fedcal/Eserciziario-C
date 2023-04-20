@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void CaricareMatrice(int x, int y, int M[x][y]);
-void SommareMatrici(int x, int y, int M1[x][y], int M2[x][y]);
-void MoltiplicareMatricePerN(int p, int x, int y, int M[x][y]);
-void VisualizzareMatrice(int x, int y, int M[x][y]);
+void CaricareMatrice(int x, int y, float M[x][y]);
+void SommareMatrici(int x, int y, float M1[x][y], float M2[x][y]);
+void MoltiplicareMatricePerN(float p, int x, int y, float M[x][y]);
+void VisualizzareMatrice(int x, int y, float M[x][y]);
 
 int main()
 {
-    int n1=0,m1=1,n2=1,m2=0,moltiplicatore=0,scelta=4;
+    int n1=0,m1=1,n2=1,m2=0,scelta=4;
+    float moltiplicatore=0;
     printf("\n Inserire le dimensioni delle due matrici (le dimensioni delle righe e delle colonne delle due matrici devono essere uguali) \n");
     while((n1!=n2)||(m1!=m2)){
         printf("\n Inserire numero righe prima matrice \n");
@@ -31,7 +32,7 @@ int main()
     printf("\n SOMMA DELLE MATRICI \n");
     SommareMatrici(n1,m1,Mat1,Mat2);
     printf("\n Inserire il numero che dovra' moltiplicare la matrice: \n");
-    scanf("%d",&moltiplicatore);
+    scanf("%f",&moltiplicatore);
     printf("\n Inserire 1 per moltiplicare la prima matrice, 2 per moltiplicare la seconda matrice \n");
     scanf("%d",&scelta);
     if(scelta==1)
@@ -40,7 +41,7 @@ int main()
         MoltiplicareMatricePerN(moltiplicatore,n2,m2,Mat2);
 }
 
-void CaricareMatrice(int x, int y, int M[x][y]){
+void CaricareMatrice(int x, int y, float M[x][y]){
     int i,j;
     i=0;
     printf("\nInserimento matrice %dx%d\n",x,y);
@@ -50,7 +51,7 @@ void CaricareMatrice(int x, int y, int M[x][y]){
         while(j<y)
             {
                 printf("\nMat[%d][%d]: ",i,j);
-                scanf("%d",&M[i][j]);
+                scanf("%f",&M[i][j]);
                 j++;
             }
         i++;
@@ -58,7 +59,7 @@ void CaricareMatrice(int x, int y, int M[x][y]){
 
 }
 
-void VisualizzareMatrice(int x, int y, int M[x][y]){
+void VisualizzareMatrice(int x, int y, float M[x][y]){
     int i,j;
     i=0;
     printf("\nVisualizzazione Matrice:");
@@ -66,16 +67,16 @@ void VisualizzareMatrice(int x, int y, int M[x][y]){
         j=0;
         printf("\n");
         while(j<y){
-            printf("%d\t",M[i][j]);
+            printf("%f\t",M[i][j]);
             j++;
         }
         i++;
     }
 }
 
-void SommareMatrici(int x, int y, int M1[x][y], int M2[x][y]){
+void SommareMatrici(int x, int y, float M1[x][y], float M2[x][y]){
     int i,j,l,m;
-    int M3[x][y];
+    float M3[x][y];
     i=0;
     while(i<x){
         j=0;
@@ -90,7 +91,7 @@ void SommareMatrici(int x, int y, int M1[x][y], int M2[x][y]){
     VisualizzareMatrice(x,y,M3);
 }
 
-void MoltiplicareMatricePerN(int p, int x, int y, int M[x][y]){
+void MoltiplicareMatricePerN(float p, int x, int y, float M[x][y]){
     int i,j;
     i=0;
     while(i<x){
